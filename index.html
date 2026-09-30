@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Aldrin ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Georgia, serif;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f3e5f5);
+            overflow: hidden;
+        }
+
+        .contenedor {
+            text-align: center;
+            padding: 40px 25px;
+            max-width: 600px;
+            animation: aparecer 2s ease;
+        }
+
+        .corazon {
+            font-size: 55px;
+            animation: latir 1.5s infinite;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 42px;
+            color: #7b4058;
+            margin-bottom: 20px;
+        }
+
+        .mensaje {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #684653;
+            margin-bottom: 35px;
+        }
+
+        button {
+            border: none;
+            background: #9c526d;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            background: #7b4058;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes latir {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .corazon-flotante {
+            position: fixed;
+            bottom: -30px;
+            font-size: 20px;
+            animation: subir 7s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes subir {
+            from {
+                transform: translateY(0);
+                opacity: 0;
+            }
+            20% {
+                opacity: 0.7;
+            }
+            to {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="corazon">❤️</div>
+
+        <h1>Para Aldrin</h1>
+
+        <p class="mensaje">
+            Hola, amor.<br><br>
+            Hice esto especialmente para ti.
+            No es algo que puedas guardar en una caja,
+            pero sí algo que hice pensando en nosotros.
+            <br><br>
+            Espero que te guste. ❤️
+        </p>
+
+        <button onclick="entrar()">
+            Abrir mi regalo ✨
+        </button>
+
+    </div>
+
+    <div class="corazon-flotante" style="left:10%; animation-delay:0s;">♡</div>
+    <div class="corazon-flotante" style="left:25%; animation-delay:2s;">♥</div>
+    <div class="corazon-flotante" style="left:45%; animation-delay:4s;">♡</div>
+    <div class="corazon-flotante" style="left:65%; animation-delay:1s;">♥</div>
+    <div class="corazon-flotante" style="left:85%; animation-delay:3s;">♡</div>
+
+    <script>
+        function entrar() {
+            alert("Nuestra historia recién comienza... ❤️");
+        }
+    </script>
+
+</body>
+</html>
