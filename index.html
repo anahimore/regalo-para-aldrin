@@ -1,147 +1,288 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Aldrin ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Aldrin ❤️</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Georgia, serif;
-            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f3e5f5);
-            overflow: hidden;
-        }
+html {
+    scroll-behavior: smooth;
+}
 
-        .contenedor {
-            text-align: center;
-            padding: 40px 25px;
-            max-width: 600px;
-            animation: aparecer 2s ease;
-        }
+body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #fff7fa;
+    color: #5f4050;
+}
 
-        .corazon {
-            font-size: 55px;
-            animation: latir 1.5s infinite;
-            margin-bottom: 25px;
-        }
+.seccion {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 25px;
+}
 
-        h1 {
-            font-size: 42px;
-            color: #7b4058;
-            margin-bottom: 20px;
-        }
+/* PORTADA */
 
-        .mensaje {
-            font-size: 19px;
-            line-height: 1.8;
-            color: #684653;
-            margin-bottom: 35px;
-        }
+.portada {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fff0f5, #fce1eb, #f8dce8);
+}
 
-        button {
-            border: none;
-            background: #9c526d;
-            color: white;
-            padding: 15px 35px;
-            border-radius: 30px;
-            font-size: 17px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+.contenido-portada {
+    max-width: 650px;
+    animation: aparecer 1.8s ease;
+}
 
-        button:hover {
-            transform: scale(1.08);
-            background: #7b4058;
-        }
+.corazon-principal {
+    font-size: 65px;
+    animation: latir 1.6s infinite;
+    margin-bottom: 20px;
+}
 
-        @keyframes aparecer {
-            from {
-                opacity: 0;
-                transform: translateY(25px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+h1 {
+    font-size: 48px;
+    color: #824b63;
+    margin-bottom: 25px;
+}
 
-        @keyframes latir {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.15);
-            }
-        }
+.intro {
+    font-size: 19px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
 
-        .corazon-flotante {
-            position: fixed;
-            bottom: -30px;
-            font-size: 20px;
-            animation: subir 7s linear infinite;
-            opacity: 0.6;
-        }
+.boton {
+    display: inline-block;
+    padding: 15px 35px;
+    background: #96546e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 17px;
+    transition: 0.3s;
+}
 
-        @keyframes subir {
-            from {
-                transform: translateY(0);
-                opacity: 0;
-            }
-            20% {
-                opacity: 0.7;
-            }
-            to {
-                transform: translateY(-110vh);
-                opacity: 0;
-            }
-        }
-    </style>
+.boton:hover {
+    transform: scale(1.08);
+    background: #7b4259;
+}
+
+/* CORAZONES */
+
+.corazon-flotante {
+    position: absolute;
+    bottom: -40px;
+    font-size: 25px;
+    opacity: 0.5;
+    animation: subir 8s linear infinite;
+}
+
+.c1 { left: 10%; animation-delay: 0s; }
+.c2 { left: 30%; animation-delay: 2s; }
+.c3 { left: 50%; animation-delay: 4s; }
+.c4 { left: 70%; animation-delay: 1s; }
+.c5 { left: 90%; animation-delay: 3s; }
+
+/* HISTORIA */
+
+.historia {
+    background: #fffafb;
+    flex-direction: column;
+}
+
+.titulo-seccion {
+    font-size: 38px;
+    color: #824b63;
+    margin-bottom: 50px;
+}
+
+.linea-tiempo {
+    max-width: 650px;
+    width: 100%;
+}
+
+.momento {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(130, 75, 99, 0.12);
+    animation: aparecer 1s ease;
+}
+
+.anio {
+    font-size: 25px;
+    font-weight: bold;
+    color: #a05270;
+    margin-bottom: 10px;
+}
+
+.momento p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.flecha {
+    color: #c27b94;
+    font-size: 25px;
+}
+
+/* ANIMACIONES */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes latir {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .titulo-seccion {
+        font-size: 31px;
+    }
+
+    .intro {
+        font-size: 17px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="contenedor">
+<!-- PORTADA -->
 
-        <div class="corazon">❤️</div>
+<section class="seccion portada">
+
+    <div class="contenido-portada">
+
+        <div class="corazon-principal">❤️</div>
 
         <h1>Para Aldrin</h1>
 
-        <p class="mensaje">
+        <p class="intro">
             Hola, amor.<br><br>
+
             Hice esto especialmente para ti.
             No es algo que puedas guardar en una caja,
             pero sí algo que hice pensando en nosotros.
             <br><br>
+
             Espero que te guste. ❤️
         </p>
 
-        <button onclick="entrar()">
+        <a href="#historia" class="boton">
             Abrir mi regalo ✨
-        </button>
+        </a>
 
     </div>
 
-    <div class="corazon-flotante" style="left:10%; animation-delay:0s;">♡</div>
-    <div class="corazon-flotante" style="left:25%; animation-delay:2s;">♥</div>
-    <div class="corazon-flotante" style="left:45%; animation-delay:4s;">♡</div>
-    <div class="corazon-flotante" style="left:65%; animation-delay:1s;">♥</div>
-    <div class="corazon-flotante" style="left:85%; animation-delay:3s;">♡</div>
+    <div class="corazon-flotante c1">♡</div>
+    <div class="corazon-flotante c2">♥</div>
+    <div class="corazon-flotante c3">♡</div>
+    <div class="corazon-flotante c4">♥</div>
+    <div class="corazon-flotante c5">♡</div>
 
-    <script>
-        function entrar() {
-            alert("Nuestra historia recién comienza... ❤️");
-        }
-    </script>
+</section>
+
+
+<!-- NUESTRA HISTORIA -->
+
+<section class="seccion historia" id="historia">
+
+    <h2 class="titulo-seccion">
+        ✨ Nuestra pequeña historia
+    </h2>
+
+    <div class="linea-tiempo">
+
+        <div class="momento">
+            <div class="anio">2021</div>
+            <p>
+                🎂 El cumpleaños donde nuestras historias
+                se cruzaron por primera vez.
+            </p>
+        </div>
+
+        <div class="flecha">↓</div>
+
+        <div class="momento">
+            <div class="anio">2023</div>
+            <p>
+                📱 Volvimos a encontrarnos por Instagram,
+                sin imaginar todo lo que vendría después.
+            </p>
+        </div>
+
+        <div class="flecha">↓</div>
+
+        <div class="momento">
+            <div class="anio">10 de octubre de 2023</div>
+            <p>
+                💋 Nuestro primer beso.
+            </p>
+        </div>
+
+        <div class="flecha">↓</div>
+
+        <div class="momento">
+            <div class="anio">29 de julio de 2024</div>
+            <p>
+                ❤️ El día que oficialmente comenzó
+                nuestra historia.
+            </p>
+        </div>
+
+    </div>
+
+</section>
 
 </body>
 </html>
