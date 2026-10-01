@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -204,6 +203,119 @@ h1 {
     box-shadow: 0 8px 25px rgba(130, 75, 99, 0.18);
 }
 
+/* CARTITAS */
+
+.cartitas {
+    min-height: 100vh;
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #fff7fa, #fdeaf1);
+}
+
+.cartitas h2 {
+    font-size: 38px;
+    color: #824b63;
+    margin-bottom: 15px;
+}
+
+.subtitulo-cartitas {
+    font-size: 17px;
+    margin-bottom: 45px;
+    color: #7a5665;
+}
+
+.contenedor-cartas {
+    max-width: 700px;
+    margin: auto;
+}
+
+.carta {
+    background: white;
+    border-radius: 22px;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px rgba(130, 75, 99, 0.15);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.carta:hover {
+    transform: translateY(-3px);
+}
+
+.boton-carta {
+    width: 100%;
+    border: none;
+    background: white;
+    padding: 22px;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 19px;
+    color: #824b63;
+    cursor: pointer;
+    text-align: left;
+}
+
+.boton-carta:hover {
+    background: #fff3f7;
+}
+
+.contenido-carta {
+    display: none;
+    padding: 0 28px 28px;
+    line-height: 1.8;
+    font-size: 17px;
+    color: #644958;
+}
+
+.carta.abierta .contenido-carta {
+    display: block;
+}
+
+.flecha-carta {
+    float: right;
+    font-size: 20px;
+}
+
+/* CARTA FINAL */
+
+.final {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8dce8, #fff0f5);
+    text-align: center;
+    padding: 80px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.final-contenido {
+    max-width: 650px;
+}
+
+.final-corazon {
+    font-size: 55px;
+    margin-bottom: 25px;
+    animation: latir 1.6s infinite;
+}
+
+.final h2 {
+    font-size: 36px;
+    color: #824b63;
+    margin-bottom: 30px;
+}
+
+.final p {
+    font-size: 19px;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+.te-amo {
+    font-size: 30px;
+    color: #96546e;
+    font-weight: bold;
+    margin-top: 35px;
+}
+
 /* ANIMACIONES */
 
 @keyframes aparecer {
@@ -266,7 +378,8 @@ h1 {
         font-size: 17px;
     }
 
-    .recuerdos h2 {
+    .recuerdos h2,
+    .cartitas h2 {
         font-size: 31px;
     }
 
@@ -274,6 +387,10 @@ h1 {
     .galeria video {
         max-width: 95%;
         max-height: 600px;
+    }
+
+    .final h2 {
+        font-size: 30px;
     }
 
 }
@@ -421,6 +538,200 @@ h1 {
 </section>
 
 
+<!-- CARTITAS -->
+
+<section class="cartitas">
+
+    <h2>💌 Unas cartitas para ti</h2>
+
+    <p class="subtitulo-cartitas">
+        Abre la que necesites en ese momento ❤️
+    </p>
+
+    <div class="contenedor-cartas">
+
+
+        <!-- CARTA 1 -->
+
+        <div class="carta">
+
+            <button class="boton-carta" onclick="abrirCarta(this)">
+                💌 Si me extrañas
+                <span class="flecha-carta">♡</span>
+            </button>
+
+            <div class="contenido-carta">
+
+                <p>
+                    Si me extrañas, quiero que recuerdes que aunque
+                    no siempre podamos estar juntos físicamente,
+                    siempre hay una parte de mí que está contigo.
+                    <br><br>
+
+                    Piensa en todos los momentos que hemos vivido,
+                    en nuestras risas, nuestros abrazos y todas esas
+                    pequeñas cosas que nos hacen ser nosotros.
+                    <br><br>
+
+                    Y si algún día me extrañas demasiado,
+                    recuerda que yo también te extraño
+                    y que siempre estoy pensando en ti. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARTA 2 -->
+
+        <div class="carta">
+
+            <button class="boton-carta" onclick="abrirCarta(this)">
+                ❤️ Si quieres saber cuánto te amo
+                <span class="flecha-carta">♡</span>
+            </button>
+
+            <div class="contenido-carta">
+
+                <p>
+                    No sé si alguna vez voy a encontrar una forma
+                    exacta de explicarte cuánto te amo.
+                    <br><br>
+
+                    Te amo en los días bonitos y también en los días
+                    difíciles. Te amo por cómo eres, por cómo me haces
+                    sentir y por todos los momentos que hemos construido.
+                    <br><br>
+
+                    Y si tuviera que elegir nuevamente,
+                    volvería a elegirte a ti. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARTA 3 -->
+
+        <div class="carta">
+
+            <button class="boton-carta" onclick="abrirCarta(this)">
+                😊 Si necesitas sonreír
+                <span class="flecha-carta">♡</span>
+            </button>
+
+            <div class="contenido-carta">
+
+                <p>
+                    Si estás leyendo esto, primero quiero que sonrías. 😌
+                    <br><br>
+
+                    Porque sí, probablemente ahora mismo estés pensando
+                    "¿qué habrá hecho esta loca?" 😂❤️
+                    <br><br>
+
+                    Pero solo quería recordarte que hay alguien
+                    que piensa en ti, que te quiere muchísimo
+                    y que se siente feliz de tenerte en su vida.
+                    <br><br>
+
+                    Así que sonríe, porque tu sonrisa también
+                    es una de mis cosas favoritas. ❤️
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARTA 4 -->
+
+        <div class="carta">
+
+            <button class="boton-carta" onclick="abrirCarta(this)">
+                🌙 Si estás por dormir
+                <span class="flecha-carta">♡</span>
+            </button>
+
+            <div class="contenido-carta">
+
+                <p>
+                    Si estás por dormir, quiero que cierres los ojos
+                    sabiendo que eres una persona muy importante para mí.
+                    <br><br>
+
+                    Espero que descanses, que tengas sueños bonitos
+                    y que mañana despiertes con una sonrisa.
+                    <br><br>
+
+                    Gracias por existir, por formar parte de mi vida
+                    y por todos los recuerdos que todavía nos quedan
+                    por crear.
+                    <br><br>
+
+                    Buenas noches, amor. 🌙❤️
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div class="final-contenido">
+
+        <div class="final-corazon">❤️</div>
+
+        <h2>Hay algo que quiero decirte...</h2>
+
+        <p>
+            No necesitaba comprarte algo.
+            <br><br>
+
+            Quería hacerte algo que solamente pudiera
+            ser tuyo, algo que guardara un poquito
+            de nuestra historia y de todo lo que siento por ti.
+            <br><br>
+
+            Gracias por cada momento, por cada risa,
+            por cada abrazo y por cada recuerdo.
+            <br><br>
+
+            Y sobre todo, gracias por ser tú.
+        </p>
+
+        <div class="te-amo">
+            Te amo, Aldrin. ❤️
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- JAVASCRIPT PARA ABRIR LAS CARTAS -->
+
+<script>
+
+function abrirCarta(boton) {
+
+    const carta = boton.parentElement;
+
+    carta.classList.toggle("abierta");
+
+}
+
+</script>
+
+
 </body>
 </html>
-```
