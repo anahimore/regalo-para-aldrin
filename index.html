@@ -94,7 +94,6 @@ h1 {
 
 .c1 {
     left: 10%;
-    animation-delay: 0s;
 }
 
 .c2 {
@@ -141,7 +140,6 @@ h1 {
     margin: 20px 0;
     border-radius: 20px;
     box-shadow: 0 8px 25px rgba(130, 75, 99, 0.12);
-    animation: aparecer 1s ease;
 }
 
 .anio {
@@ -193,23 +191,12 @@ h1 {
     box-shadow: 0 8px 25px rgba(130, 75, 99, 0.18);
 }
 
-.galeria video {
-    display: block;
-    width: auto;
-    max-width: 90%;
-    height: auto;
-    max-height: 650px;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(130, 75, 99, 0.18);
-}
-
 /* CARTITAS */
 
 .cartitas {
-    min-height: 100vh;
     padding: 80px 20px;
+    background: #fffafb;
     text-align: center;
-    background: linear-gradient(135deg, #fff7fa, #fdeaf1);
 }
 
 .cartitas h2 {
@@ -218,10 +205,9 @@ h1 {
     margin-bottom: 15px;
 }
 
-.subtitulo-cartitas {
+.subtitulo {
     font-size: 17px;
-    margin-bottom: 45px;
-    color: #7a5665;
+    margin-bottom: 40px;
 }
 
 .contenedor-cartas {
@@ -231,89 +217,131 @@ h1 {
 
 .carta {
     background: white;
-    border-radius: 22px;
     margin: 20px 0;
-    box-shadow: 0 8px 25px rgba(130, 75, 99, 0.15);
-    overflow: hidden;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(130, 75, 99, 0.12);
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .carta:hover {
-    transform: translateY(-3px);
+    transform: scale(1.02);
 }
 
-.boton-carta {
-    width: 100%;
-    border: none;
-    background: white;
-    padding: 22px;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 19px;
-    color: #824b63;
-    cursor: pointer;
-    text-align: left;
+.carta-titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #96546e;
 }
 
-.boton-carta:hover {
-    background: #fff3f7;
-}
-
-.contenido-carta {
+.carta-texto {
     display: none;
-    padding: 0 28px 28px;
+    margin-top: 20px;
     line-height: 1.8;
-    font-size: 17px;
-    color: #644958;
+    font-size: 16px;
 }
 
-.carta.abierta .contenido-carta {
+.carta.abierta .carta-texto {
     display: block;
 }
 
-.flecha-carta {
-    float: right;
-    font-size: 20px;
+/* CANCIONES */
+
+.canciones {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #fff0f5, #fce1eb);
+    text-align: center;
 }
 
-/* CARTA FINAL */
+.canciones h2 {
+    font-size: 38px;
+    color: #824b63;
+    margin-bottom: 40px;
+}
+
+.lista-canciones {
+    max-width: 650px;
+    margin: auto;
+}
+
+.cancion {
+    background: white;
+    margin: 15px 0;
+    padding: 18px 25px;
+    border-radius: 18px;
+    box-shadow: 0 6px 18px rgba(130, 75, 99, 0.10);
+    font-size: 17px;
+}
+
+/* VIDEO */
+
+.video-seccion {
+    padding: 80px 20px;
+    text-align: center;
+    background: #fffafb;
+}
+
+.video-seccion h2 {
+    font-size: 38px;
+    color: #824b63;
+    margin-bottom: 20px;
+}
+
+.video-seccion p {
+    font-size: 17px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.boton-video {
+    display: inline-block;
+    padding: 16px 30px;
+    background: #96546e;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.boton-video:hover {
+    transform: scale(1.06);
+    background: #7b4259;
+}
+
+/* MENSAJE FINAL */
 
 .final {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f8dce8, #fff0f5);
-    text-align: center;
     padding: 80px 25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #fce1eb, #fff0f5);
 }
 
-.final-contenido {
-    max-width: 650px;
+.mensaje-final {
+    max-width: 700px;
 }
 
-.final-corazon {
-    font-size: 55px;
-    margin-bottom: 25px;
-    animation: latir 1.6s infinite;
-}
-
-.final h2 {
-    font-size: 36px;
+.mensaje-final h2 {
+    font-size: 38px;
     color: #824b63;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
-.final p {
-    font-size: 19px;
+.mensaje-final p {
+    font-size: 18px;
     line-height: 2;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 }
 
 .te-amo {
-    font-size: 30px;
+    font-size: 28px;
     color: #96546e;
-    font-weight: bold;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 /* ANIMACIONES */
@@ -370,7 +398,12 @@ h1 {
         font-size: 38px;
     }
 
-    .titulo-seccion {
+    .titulo-seccion,
+    .recuerdos h2,
+    .cartitas h2,
+    .canciones h2,
+    .video-seccion h2,
+    .mensaje-final h2 {
         font-size: 31px;
     }
 
@@ -378,19 +411,9 @@ h1 {
         font-size: 17px;
     }
 
-    .recuerdos h2,
-    .cartitas h2 {
-        font-size: 31px;
-    }
-
-    .galeria img,
-    .galeria video {
+    .galeria img {
         max-width: 95%;
         max-height: 600px;
-    }
-
-    .final h2 {
-        font-size: 30px;
     }
 
 }
@@ -447,52 +470,40 @@ h1 {
     <div class="linea-tiempo">
 
         <div class="momento">
-
             <div class="anio">2021</div>
-
             <p>
                 🎂 El cumpleaños donde nuestras historias
                 se cruzaron por primera vez.
             </p>
-
         </div>
 
         <div class="flecha">↓</div>
 
         <div class="momento">
-
             <div class="anio">2023</div>
-
             <p>
                 📱 Volvimos a encontrarnos por Instagram,
                 sin imaginar todo lo que vendría después.
             </p>
-
         </div>
 
         <div class="flecha">↓</div>
 
         <div class="momento">
-
             <div class="anio">10 de octubre de 2023</div>
-
             <p>
                 💋 Nuestro primer beso.
             </p>
-
         </div>
 
         <div class="flecha">↓</div>
 
         <div class="momento">
-
             <div class="anio">29 de julio de 2024</div>
-
             <p>
                 ❤️ El día que oficialmente comenzó
                 nuestra historia.
             </p>
-
         </div>
 
     </div>
@@ -528,11 +539,6 @@ h1 {
 
         <img src="IMG_20260806_194100.jpg" alt="Nuestro recuerdo">
 
-        <video controls>
-            <source src="2026-02-24-170526884.mp4" type="video/mp4">
-            Tu navegador no puede reproducir este video.
-        </video>
-
     </div>
 
 </section>
@@ -544,138 +550,61 @@ h1 {
 
     <h2>💌 Unas cartitas para ti</h2>
 
-    <p class="subtitulo-cartitas">
+    <p class="subtitulo">
         Abre la que necesites en ese momento ❤️
     </p>
 
     <div class="contenedor-cartas">
 
-
-        <!-- CARTA 1 -->
-
-        <div class="carta">
-
-            <button class="boton-carta" onclick="abrirCarta(this)">
+        <div class="carta" onclick="abrirCarta(this)">
+            <div class="carta-titulo">
                 💌 Si me extrañas
-                <span class="flecha-carta">♡</span>
-            </button>
-
-            <div class="contenido-carta">
-
-                <p>
-                    Si me extrañas, quiero que recuerdes que aunque
-                    no siempre podamos estar juntos físicamente,
-                    siempre hay una parte de mí que está contigo.
-                    <br><br>
-
-                    Piensa en todos los momentos que hemos vivido,
-                    en nuestras risas, nuestros abrazos y todas esas
-                    pequeñas cosas que nos hacen ser nosotros.
-                    <br><br>
-
-                    Y si algún día me extrañas demasiado,
-                    recuerda que yo también te extraño
-                    y que siempre estoy pensando en ti. ❤️
-                </p>
-
             </div>
 
+            <div class="carta-texto">
+                Si me extrañas, recuerda que aunque no esté
+                a tu lado en ese momento, siempre hay una parte
+                de mí pensando en ti. ❤️
+            </div>
         </div>
 
 
-        <!-- CARTA 2 -->
-
-        <div class="carta">
-
-            <button class="boton-carta" onclick="abrirCarta(this)">
+        <div class="carta" onclick="abrirCarta(this)">
+            <div class="carta-titulo">
                 ❤️ Si quieres saber cuánto te amo
-                <span class="flecha-carta">♡</span>
-            </button>
-
-            <div class="contenido-carta">
-
-                <p>
-                    No sé si alguna vez voy a encontrar una forma
-                    exacta de explicarte cuánto te amo.
-                    <br><br>
-
-                    Te amo en los días bonitos y también en los días
-                    difíciles. Te amo por cómo eres, por cómo me haces
-                    sentir y por todos los momentos que hemos construido.
-                    <br><br>
-
-                    Y si tuviera que elegir nuevamente,
-                    volvería a elegirte a ti. ❤️
-                </p>
-
             </div>
 
+            <div class="carta-texto">
+                Muchísimo más de lo que puedo explicar con
+                palabras. Y si pudiera elegir nuevamente,
+                volvería a elegirte a ti. ❤️
+            </div>
         </div>
 
 
-        <!-- CARTA 3 -->
-
-        <div class="carta">
-
-            <button class="boton-carta" onclick="abrirCarta(this)">
+        <div class="carta" onclick="abrirCarta(this)">
+            <div class="carta-titulo">
                 😊 Si necesitas sonreír
-                <span class="flecha-carta">♡</span>
-            </button>
-
-            <div class="contenido-carta">
-
-                <p>
-                    Si estás leyendo esto, primero quiero que sonrías. 😌
-                    <br><br>
-
-                    Porque sí, probablemente ahora mismo estés pensando
-                    "¿qué habrá hecho esta loca?" 😂❤️
-                    <br><br>
-
-                    Pero solo quería recordarte que hay alguien
-                    que piensa en ti, que te quiere muchísimo
-                    y que se siente feliz de tenerte en su vida.
-                    <br><br>
-
-                    Así que sonríe, porque tu sonrisa también
-                    es una de mis cosas favoritas. ❤️
-                </p>
-
             </div>
 
+            <div class="carta-texto">
+                Recuerda todos nuestros momentos juntos,
+                nuestras tonterías y esas veces en las que
+                terminamos riéndonos por cualquier cosa. 🥹❤️
+            </div>
         </div>
 
 
-        <!-- CARTA 4 -->
-
-        <div class="carta">
-
-            <button class="boton-carta" onclick="abrirCarta(this)">
+        <div class="carta" onclick="abrirCarta(this)">
+            <div class="carta-titulo">
                 🌙 Si estás por dormir
-                <span class="flecha-carta">♡</span>
-            </button>
-
-            <div class="contenido-carta">
-
-                <p>
-                    Si estás por dormir, quiero que cierres los ojos
-                    sabiendo que eres una persona muy importante para mí.
-                    <br><br>
-
-                    Espero que descanses, que tengas sueños bonitos
-                    y que mañana despiertes con una sonrisa.
-                    <br><br>
-
-                    Gracias por existir, por formar parte de mi vida
-                    y por todos los recuerdos que todavía nos quedan
-                    por crear.
-                    <br><br>
-
-                    Buenas noches, amor. 🌙❤️
-                </p>
-
             </div>
 
+            <div class="carta-texto">
+                Duerme tranquilo, amor. Espero que descanses
+                bonito y que mañana tengas un día increíble.
+                Buenas noches. ❤️
+            </div>
         </div>
 
     </div>
@@ -683,55 +612,127 @@ h1 {
 </section>
 
 
-<!-- FINAL -->
+<!-- CANCIONES -->
+
+<section class="canciones">
+
+    <h2>🎵 Cada canción de amor habla de ti</h2>
+
+    <div class="lista-canciones">
+
+        <div class="cancion">
+            🎶 Antes Que El Tiempo Se Vaya — Fonseca & Juanes
+        </div>
+
+        <div class="cancion">
+            🎶 Todo Cambió — Camila
+        </div>
+
+        <div class="cancion">
+            🎶 Te Voy A Amar — Axel
+        </div>
+
+        <div class="cancion">
+            🎶 Compartir — Carla Morrison
+        </div>
+
+        <div class="cancion">
+            🎶 Amor Completo — Mon Laferte
+        </div>
+
+        <div class="cancion">
+            🎶 Contigo — Los Panchos
+        </div>
+
+        <div class="cancion">
+            🎶 Loco (Tu Forma de Ser) — Los Auténticos Decadentes
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VIDEO -->
+
+<section class="video-seccion">
+
+    <h2>🎬 Un pedacito de nosotros</h2>
+
+    <p>
+        Hice este video para guardar algunos de nuestros
+        momentos favoritos. ❤️
+    </p>
+
+    <a
+        href="https://drive.google.com/file/d/1W6lGOYUfBxGbHe8TQxBZjke5GYDim-Ro/view?usp=sharing"
+        target="_blank"
+        class="boton-video">
+        🎬 Ver nuestro video ❤️
+    </a>
+
+</section>
+
+
+<!-- MENSAJE FINAL -->
 
 <section class="final">
 
-    <div class="final-contenido">
+    <div class="mensaje-final">
 
-        <div class="final-corazon">❤️</div>
-
-        <h2>Hay algo que quiero decirte...</h2>
+        <h2>❤️ Hay algo que quiero decirte...</h2>
 
         <p>
-            No necesitaba comprarte algo.
-            <br><br>
-
-            Quería hacerte algo que solamente pudiera
-            ser tuyo, algo que guardara un poquito
-            de nuestra historia y de todo lo que siento por ti.
-            <br><br>
-
-            Gracias por cada momento, por cada risa,
-            por cada abrazo y por cada recuerdo.
-            <br><br>
-
-            Y sobre todo, gracias por ser tú.
+            A veces siento que no encuentro las palabras exactas
+            para decirte todo lo que significas para mí.
         </p>
 
-        <div class="te-amo">
-            Te amo, Aldrin. ❤️
-        </div>
+        <p>
+            Por eso hice esto. Quería guardar un poquito de nuestra
+            historia, nuestros recuerdos, las canciones que me hacen
+            pensar en ti y todos esos momentos que, aunque parezcan
+            pequeños, para mí significan muchísimo.
+        </p>
+
+        <p>
+            Hemos vivido tantas cosas juntos, hemos cambiado,
+            aprendido y crecido, pero hay algo que sigue igual:
+            las ganas de seguir compartiendo mi vida contigo.
+        </p>
+
+        <p>
+            Gracias por cada abrazo, cada risa, cada conversación,
+            cada momento bonito y también por estar en los momentos
+            no tan fáciles.
+        </p>
+
+        <p>
+            Y si algún día me preguntas cuánto te amo,
+            probablemente nunca encuentre una forma exacta
+            de explicarlo.
+        </p>
+
+        <p>
+            Solo sé que te elegiría una y otra vez. ❤️
+        </p>
+
+        <p class="te-amo">
+            Te amo, Aldrin. ❤️<br><br>
+            Y espero que sigamos creando muchos recuerdos más juntos.
+        </p>
 
     </div>
 
 </section>
 
 
-<!-- JAVASCRIPT PARA ABRIR LAS CARTAS -->
-
 <script>
 
-function abrirCarta(boton) {
-
-    const carta = boton.parentElement;
-
+function abrirCarta(carta) {
     carta.classList.toggle("abierta");
-
 }
 
 </script>
-
 
 </body>
 </html>
