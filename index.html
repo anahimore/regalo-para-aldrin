@@ -1,11 +1,14 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Para Aldrin ❤️</title>
 
 <style>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,6 +24,8 @@ body {
     background: #fff7fa;
     color: #5f4050;
 }
+
+/* SECCIONES */
 
 .seccion {
     min-height: 100vh;
@@ -88,11 +93,30 @@ h1 {
     animation: subir 8s linear infinite;
 }
 
-.c1 { left: 10%; animation-delay: 0s; }
-.c2 { left: 30%; animation-delay: 2s; }
-.c3 { left: 50%; animation-delay: 4s; }
-.c4 { left: 70%; animation-delay: 1s; }
-.c5 { left: 90%; animation-delay: 3s; }
+.c1 {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.c2 {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.c3 {
+    left: 50%;
+    animation-delay: 4s;
+}
+
+.c4 {
+    left: 70%;
+    animation-delay: 1s;
+}
+
+.c5 {
+    left: 90%;
+    animation-delay: 3s;
+}
 
 /* HISTORIA */
 
@@ -138,9 +162,52 @@ h1 {
     font-size: 25px;
 }
 
+/* RECUERDOS */
+
+.recuerdos {
+    padding: 70px 20px;
+    text-align: center;
+    background: #fff7fa;
+}
+
+.recuerdos h2 {
+    font-size: 38px;
+    color: #824b63;
+    margin-bottom: 45px;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    width: 100%;
+}
+
+.galeria img {
+    display: block;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 650px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(130, 75, 99, 0.18);
+}
+
+.galeria video {
+    display: block;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 650px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(130, 75, 99, 0.18);
+}
+
 /* ANIMACIONES */
 
 @keyframes aparecer {
+
     from {
         opacity: 0;
         transform: translateY(25px);
@@ -150,9 +217,11 @@ h1 {
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 @keyframes latir {
+
     0%, 100% {
         transform: scale(1);
     }
@@ -160,9 +229,11 @@ h1 {
     50% {
         transform: scale(1.15);
     }
+
 }
 
 @keyframes subir {
+
     from {
         transform: translateY(0);
         opacity: 0;
@@ -176,7 +247,10 @@ h1 {
         transform: translateY(-110vh);
         opacity: 0;
     }
+
 }
+
+/* CELULAR */
 
 @media (max-width: 600px) {
 
@@ -191,37 +265,20 @@ h1 {
     .intro {
         font-size: 17px;
     }
-}
-.recuerdos {
-    padding: 50px 20px;
-    text-align: center;
+
+    .recuerdos h2 {
+        font-size: 31px;
+    }
+
+    .galeria img,
+    .galeria video {
+        max-width: 95%;
+        max-height: 600px;
+    }
+
 }
 
-.recuerdos h2 {
-    margin-bottom: 30px;
-}
-
-.galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 25px;
-}
-
-.galeria img,
-.galeria video {
-    width: 90%;
-    max-width: 500px;
-    height: 500px;
-    object-fit: contain;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
-
-.galeria video {
-    height: auto;
-    max-height: 500px;
-}</style>
+</style>
 </head>
 
 <body>
@@ -273,65 +330,97 @@ h1 {
     <div class="linea-tiempo">
 
         <div class="momento">
+
             <div class="anio">2021</div>
+
             <p>
                 🎂 El cumpleaños donde nuestras historias
                 se cruzaron por primera vez.
             </p>
+
         </div>
 
         <div class="flecha">↓</div>
 
         <div class="momento">
+
             <div class="anio">2023</div>
+
             <p>
                 📱 Volvimos a encontrarnos por Instagram,
                 sin imaginar todo lo que vendría después.
             </p>
+
         </div>
 
         <div class="flecha">↓</div>
 
         <div class="momento">
+
             <div class="anio">10 de octubre de 2023</div>
+
             <p>
                 💋 Nuestro primer beso.
             </p>
+
         </div>
 
         <div class="flecha">↓</div>
 
         <div class="momento">
+
             <div class="anio">29 de julio de 2024</div>
+
             <p>
                 ❤️ El día que oficialmente comenzó
                 nuestra historia.
             </p>
+
         </div>
 
     </div>
 
 </section>
+
+
+<!-- NUESTROS RECUERDOS -->
+
 <section class="recuerdos">
-    <h2>Nuestros recuerdos ❤️</h2>
+
+    <h2>
+        Nuestros recuerdos ❤️
+    </h2>
 
     <div class="galeria">
+
         <img src="1000000131.jpg" alt="Nuestro recuerdo">
+
         <img src="1000017151.jpg" alt="Nuestro recuerdo">
+
         <img src="1000207212.webp" alt="Nuestro recuerdo">
+
         <img src="1000239678.webp" alt="Nuestro recuerdo">
+
         <img src="1000332436.jpg" alt="Nuestro recuerdo">
+
         <img src="19fe9f0b-b5fd-4a1f-81b7-fcd4930607a7-1_all_1439.jpg" alt="Nuestro recuerdo">
+
         <img src="Captura de pantalla 2026-09-30 210008.png" alt="Nuestro recuerdo">
+
         <img src="IMG_20260223_210616.jpg" alt="Nuestro recuerdo">
+
         <img src="IMG_20260806_194100.jpg" alt="Nuestro recuerdo">
 
         <video controls>
             <source src="2026-02-24-170526884.mp4" type="video/mp4">
             Tu navegador no puede reproducir este video.
         </video>
+
     </div>
+
 </section>
+
 
 </body>
 </html>
+```
