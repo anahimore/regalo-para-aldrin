@@ -192,7 +192,36 @@ h1 {
         font-size: 17px;
     }
 }
-</style>
+.recuerdos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.recuerdos h2 {
+    margin-bottom: 30px;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.galeria img,
+.galeria video {
+    width: 90%;
+    max-width: 500px;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.galeria video {
+    height: auto;
+    max-height: 500px;
+}</style>
 </head>
 
 <body>
